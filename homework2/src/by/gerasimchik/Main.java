@@ -4,12 +4,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int s =645000;     // Р   А    Б    О    Т     А      Е       Т  !!!!!!!!!!!!
+        int s =1000000;     // Р   А    Б    О    Т     А      Е       Т  !!!!!!!!!!!!
         int sec;           //          К
         int m;             //            А
         int min, h;        //              К
         int hh;            //
-        int day, d, w;     //           Ч  А  С  Ы       
+        int day, d, w;     //           Ч  А  С  Ы    =)
 
         sec = s % 60;  // количество секунд
         m = (s-sec)/60;  // переменная содержащая ровное количество минут
