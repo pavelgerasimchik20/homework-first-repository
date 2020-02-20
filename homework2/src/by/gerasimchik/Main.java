@@ -20,6 +20,8 @@ public class Main {
         d = day % 7;   //количество суток
         w = day / 7; //количество недель
 
+
+        System.out.println("push into master from idea(homework 2)");
         System.out.println(w + " недель " + d + " суток " + hh + " часов " + min + " минут " + sec + " секунд ");
     }
 }
