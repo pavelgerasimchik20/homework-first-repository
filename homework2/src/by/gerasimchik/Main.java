@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int s =1000000;     // Р   А    Б    О    Т     А      Е       Т  !!!!!!!!!!!!
+        int s =999999999;     // Р   А    Б    О    Т     А      Е       Т  !!!!!!!!!!!!
         int sec;           //          К
         int m;             //            А
         int min, h;        //              К
