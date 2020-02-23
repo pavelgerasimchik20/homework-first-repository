@@ -51,27 +51,26 @@ public class Main {
                 System.out.println("Такого числа не существует");
             }
         } else if (b == 2) {
-            if (c % 400 == 0 || ( c % 4 == 0 && c % 100 != 0)){
-                if (a>=1 && a<29){
+            if (c % 400 == 0 || (c % 4 == 0 && c % 100 != 0)) {
+                if (a >= 1 && a < 29) {
                     a++;
                     System.out.println(a + " " + b + " " + c);
-                }else if (a==29){
-                    a=1;
+                } else if (a == 29) {
+                    a = 1;
                     b++;
                     System.out.println(a + " " + b + " " + c);
-                }else {
+                } else {
                     System.out.println("Такого числа не существует");
                 }
-            }
-            else {
-                if (a>=1 && a<28){
+            } else {
+                if (a >= 1 && a < 28) {
                     a++;
                     System.out.println(a + " " + b + " " + c);
-                }else if (a==28){
-                    a=1;
+                } else if (a == 28) {
+                    a = 1;
                     b++;
                     System.out.println(a + " " + b + " " + c);
-                }else {
+                } else {
                     System.out.println("Такого числа не существует");
                 }
             }
@@ -79,22 +78,22 @@ public class Main {
             System.out.println("Такого месяца не существует");
         }
         //Задание 7
-        int a1=1;
-        int b1=1;
-        int c1=1;
-        int d1=3;
-        int e=2; // размеры
-        int f=2; // участка
+        int a1 = 6;
+        int b1 = 10;
+        int c1 = 5;
+        int d1 = 10;
+        int e = 10; // размеры
+        int f = 10; // участка
 
-        if (f>=b1+c1 && e>=d1 && e>=a1){
+        if (f >= b1 + c1 && e >= d1 && e >= a1) {
             System.out.println("Дома вмещаются на участке");
-        }else if (f>=b1+d1 && e>=c1 && e>=a1){
+        } else if (f >= b1 + d1 && e >= c1 && e >= a1) {
             System.out.println("Дома вмещаются на участке");
-        }else if (f>=a1+c1 && e>=b1 &&e>=d1){
+        } else if (f >= a1 + c1 && e >= b1 && e >= d1) {
             System.out.println("Дома вмещаются на участке");
-        }else if (f>=a1+d1 && e>=b1 &&e>=c1){
+        } else if (f >= a1 + d1 && e >= b1 && e >= c1) {
             System.out.println("Дома вмещаются на участке");
-        }else{
+        } else {
             System.out.println("Дома НЕ вмещаются на участке");
         }
     }
