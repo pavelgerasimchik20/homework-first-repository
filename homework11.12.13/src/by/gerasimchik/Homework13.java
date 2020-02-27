@@ -9,8 +9,11 @@ public class Homework13 {
             System.out.println("Введите число для проверки : ");
             Scanner scanner = new Scanner(System.in);
             int a = scanner.nextInt();
-            if (a==0){
+            if (a == 0) {
                 System.out.println("Не вводи ноль, плохой человек !!!");
+                continue;
+            } else if (a < 0) {
+                System.out.println("Введите положительно число");
                 continue;
             }
             boolean sost = false;
