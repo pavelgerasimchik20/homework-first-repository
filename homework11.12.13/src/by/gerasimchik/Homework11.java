@@ -2,7 +2,7 @@ package by.gerasimchik;
 
 import java.util.Scanner;
 
-public class Main {
+public class Homework11 {
 
     public static void main(String[] args) {
         //ЗАДАНИЕ 11
