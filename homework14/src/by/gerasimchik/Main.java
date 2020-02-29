@@ -9,7 +9,7 @@ public class Main {
             System.out.print(marks[i] + " ");
         }
         System.out.println();
-        
+
         int maxDigit = marks[0];
         for (int i = 0; i < marks.length; i++) {
             if (maxDigit < marks[i]) {
