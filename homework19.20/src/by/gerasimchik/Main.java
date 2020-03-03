@@ -16,6 +16,8 @@ public class Main {
             space = trim.charAt(i);
             if (space == ' ') {
                 count++;
+            }else if (space=='-'){
+                count++;
             }
         }
         JOptionPane.showMessageDialog(null, "Количество слов в данном тексте = " + (count + 1));
