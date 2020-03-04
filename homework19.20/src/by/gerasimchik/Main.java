@@ -9,18 +9,15 @@ public class Main {
 
         String str;
         int count = 0;
-        str = JOptionPane.showInputDialog("Введите текст (без пунктуационных ошибок):\n-вводите пробел после знаков препинания\n-не вводите пробел до и после дефиса");
-        final String trim = str.trim();
-        char space;
-        for (int i = 0; i < trim.length(); i++) {
-            space = trim.charAt(i);
-            if (space == ' ') {
-                count++;
-            }else if (space=='-'){
-                count++;
-            }
+        str = JOptionPane.showInputDialog("Введите текст :");
+        str = str.replaceAll("[!.,?:;-<>]", "");
+        String trim = str.trim();
+
+        String[] txt = trim.split(" +");
+        for (String word: txt){
+            count++;
         }
-        JOptionPane.showMessageDialog(null, "Количество слов в данном тексте = " + (count + 1));
+        JOptionPane.showMessageDialog(null, "Количество слов в данном тексте = " + count);
 
     }
 }
