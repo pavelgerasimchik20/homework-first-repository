@@ -11,6 +11,7 @@ public class Main {
         int count = 0;
         str = JOptionPane.showInputDialog("Введите текст :");
         str = str.replaceAll("[!.,?:;-<>]", "");
+        str = str.replaceAll("-?[0-9]+", "");
         String trim = str.trim();
 
         String[] txt = trim.split(" +");
