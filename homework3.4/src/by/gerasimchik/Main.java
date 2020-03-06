@@ -12,7 +12,7 @@ public class Main {
         //Задание 4
         int с=15;
         int b=25;
-        int radius=17;
+        int radius=10;
         if(radius>=(Math.sqrt(Math.pow(с,2)+Math.pow(b,2)))/2)
             System.out.println("Картонка с радиусом "+ radius + " полностью закроет отверстие");
         else
