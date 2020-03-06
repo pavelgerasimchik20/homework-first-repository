@@ -14,7 +14,6 @@ public class Main {
         for (int i = 0; i < marks.length; i++) {
             if (maxDigit < marks[i]) {
                 maxDigit = marks[i];
-
             }
         }
         for (int i = 0; i < marks.length; i++) {

@@ -3,24 +3,30 @@ package by.gerasimchik;
 public class Main {
 
     static double t, t1 = 0, t2 = 0;
-    static String str = " java forever ";
+    static String str = "1 java forever ";
+    static int n = 2;
 
     public static void main(String[] args) {
 
-        for (int i = 0; i < 100; i++) {
+        StringBuilder stringBuilder = new StringBuilder(str);
+
+        for (int i = 0; i < 99; i++) {
             t = System.currentTimeMillis();
-            str += " java forever ";
+            str += n + " java forever ";
+            n++;
             t1 += System.currentTimeMillis() - t;
         }
 
-        StringBuilder stringBuilder = new StringBuilder(str);
-
-        for (int i = 0; i < 100; i++) {
+        int n = 2;
+        for (int i = 0; i < 99; i++) {
             t = System.currentTimeMillis();
-            stringBuilder.append(" java forever ");
+            stringBuilder.append(n + " java forever ");
+            n++;
             t2 += System.currentTimeMillis() - t;
         }
-        System.out.println("Strint execution speed: " + t1);
+        System.out.println(str);
+        System.out.println("String execution speed: " + t1);
+        System.out.println(stringBuilder);
         System.out.println("StringBuilder execution speed: " + t2);
     }
 
