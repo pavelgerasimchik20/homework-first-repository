@@ -10,7 +10,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введине количество рублей: ");
         int x = scanner.nextInt();
-        if ((x % 10 == 1 && x != 11) || x == 1)
+        if (x % 100 == 11)
+            System.out.println(x + " рублей");
+        else if ((x % 10 == 1 && x != 11) || x == 1)
             System.out.println(x + " рубль");
         else if (x % 10 == 2 && x != 12 || x == 2)
             System.out.println(x + " рубля");
