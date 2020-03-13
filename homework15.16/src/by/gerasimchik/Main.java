@@ -4,10 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
         //ЗАДАНИЕ 15
+
         int sum = 0;
-        int[] ggg = {1, 1, 1, 1, 1, 1, 1, 1, 1, 10};
-        for (int i = 1; i < ggg.length - 1; i++) {
-            sum += ggg[i];
+        int[] mass = {18, 0, 1, 2, 18, 2, 1, 0, 1, 10};
+        for (int i = 1; i < mass.length - 1; i++) {
+            sum += mass[i];
         }
         System.out.println("Сумма элементов массива (за исключением крайних)= " + sum);
 
