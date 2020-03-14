@@ -29,7 +29,6 @@ public class Bankomat {
         } else {
             int a = (Cash - (Cash % 100)) / (100);
             hundredDollar -= a;
-            //Cash = Cash   //1800 : 9 = 200;
             fiftyDollar -= 0;
             Cash = Cash % 100;
             int b = Cash / 20;

@@ -9,7 +9,7 @@ public class Main {
         belinvestbank.addCash(100,100,100);
 
         belinvestbank.showBanknote();
-        belinvestbank.takeMoney(1210);
+        belinvestbank.takeMoney(1220);
         belinvestbank.showBanknote();
     }
 }
