@@ -7,8 +7,6 @@ import java.util.Set;
 
 public class Main {
 
-    public static Integer x;
-
     public static void main(String[] args) {
 
         ArrayList<Integer> list = new ArrayList<>();
