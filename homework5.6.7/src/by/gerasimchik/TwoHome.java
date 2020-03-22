@@ -9,28 +9,36 @@ public class TwoHome {
         //Задание 7
         Scanner sc = new Scanner(System.in);
         System.out.println("Ширина первого дома:");
-        int a1 = sc.nextInt();
+        int a = sc.nextInt();
         System.out.println("Длина первого дома:");
-        int b1 = sc.nextInt();
+        int b = sc.nextInt();
         System.out.println("Ширина второго дома:");
-        int c1 = sc.nextInt();
+        int c = sc.nextInt();
         System.out.println("Длина второго дома:");
-        int d1 = sc.nextInt();
+        int d = sc.nextInt();
         System.out.println("Размер участка OY:");
         int e = sc.nextInt(); // размеры
         System.out.println("Размер участка OX:");
         int f = sc.nextInt(); // участка
 
-        if (f >= b1 + c1 && e >= d1 && e >= a1) {
+        if ((e >= (c + a)) && (f >= d && f >= b)) {
             System.out.println("Дома вмещаются на участке");
-        } else if (f >= b1 + d1 && e >= c1 && e >= a1) {
+        } else if ((e >= (c + b)) && (f >= d && f >= a)) {
             System.out.println("Дома вмещаются на участке");
-        } else if (f >= a1 + c1 && e >= b1 && e >= d1) {
+        } else if ((e >= (d + a)) && (f >= c && f >= b)) {
             System.out.println("Дома вмещаются на участке");
-        } else if (f >= a1 + d1 && e >= b1 && e >= c1) {
+        } else if ((e >= (d + b)) && (f >= c && f >= a)) {
             System.out.println("Дома вмещаются на участке");
-        } else {
-            System.out.println("Дома НЕ вмещаются на участке");
+        } else if ((f >= (c + a)) && (e >= d && e >= b)) {
+            System.out.println("Дома вмещаются на участке");
+        } else if ((f >= (c + b)) && (e >= d && e >= a)) {
+            System.out.println("Дома вмещаются на участке");
+        } else if ((f >= (d + a)) && (e >= c && e >= b)) {
+            System.out.println("Дома вмещаются на участке");
+        } else if ((f >= (d + b)) && (e >= c && e >= a)) {
+            System.out.println("Дома вмещаются на участке");
         }
+        else
+            System.out.println("Дома НЕ вмещаются на участке");
     }
 }
