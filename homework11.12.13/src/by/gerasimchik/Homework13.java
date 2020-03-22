@@ -10,7 +10,7 @@ public class Homework13 {
             Scanner scanner = new Scanner(System.in);
             int a = scanner.nextInt();
             if (a == 0) {
-                System.out.println("Не вводи ноль, плохой человек !!!");
+                System.out.println("Не вводи ноль !!!");
                 continue;
             } else if (a < 0) {
                 System.out.println("Введите положительно число");
