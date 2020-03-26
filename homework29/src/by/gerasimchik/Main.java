@@ -14,7 +14,6 @@ public class Main {
         String text = scanner.nextLine();
             text = text.toLowerCase();
 
-
             Map<Character, Integer> map = new HashMap<>();
             for (int i = 0; i < text.length(); i++) {
                 char ch = text.charAt(i);
