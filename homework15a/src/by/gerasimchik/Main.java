@@ -1,7 +1,4 @@
 package by.gerasimchik;
-
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.Arrays;
 
 public class Main {
@@ -26,9 +23,9 @@ public class Main {
 
         int sum = 0;
         for (int i = 1; i < mass.length - 1; i++) {
-            sum+=mass[i];
+            sum += mass[i];
         }
-        System.out.println(sum);
+        System.out.println("Сумма= " + sum);
     }
 
 
