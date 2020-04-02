@@ -1,18 +1,18 @@
 package by.shopper;
 
+import by.cashbox.CashBoxImpl;
 import by.product.Product;
 
-public class ShopperImpl implements Shopper {
+public class ShopperImpl implements Shopper, Runnable {
 
-    private volatile int money = 220;
+    private CashBoxImpl cashBox;
+    private static volatile int money = 240;
     Product product1 = new Product();
     Product product2 = new Product();
     Product product3 = new Product();
 
-    public ShopperImpl(Product product1, Product product2, Product product3) {
-        this.product1 = product1;
-        this.product2 = product2;
-        this.product3 = product3;
+    public void setCashBox(CashBoxImpl cashBox) {
+        this.cashBox = cashBox;
     }
 
     @Override
@@ -29,5 +29,26 @@ public class ShopperImpl implements Shopper {
     @Override
     public void getChange() {
         System.out.println("Сдача получена ");
+    }
+
+    @Override
+    public void run() {
+        if (money > product1.cost + product2.cost + product3.cost) {
+            try {
+                Thread.currentThread().sleep(3_000);
+                money -= giveCash();
+            } catch (InterruptedException e) {
+                System.out.println(e.getMessage());
+            }
+            System.out.println("Покупатель " + Thread.currentThread().getName() + " купил:\n товар 1 стоимостью " + product1.cost + "\n товар 2 стоимостью " + product2.cost + "\n товар 3 стоимостью " + product3.cost);
+        } else {
+            // System.out.println("Покупатель ушел без покупок ");
+            try {
+                Thread.currentThread().wait();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+        }
     }
 }

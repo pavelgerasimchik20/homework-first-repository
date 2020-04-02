@@ -5,6 +5,6 @@ public class Product {
     public int cost;
 
     public Product() {
-        cost= (int) (Math.random()*100);
+        cost = (int) (Math.random() * 100 + 1);
     }
 }

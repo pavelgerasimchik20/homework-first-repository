@@ -2,12 +2,14 @@ package by.cashbox;
 
 public class CashBoxImpl implements CashBox {
 
-    private int cashBalance;
+    private Integer cashBalance;
+    public boolean isRun = true;
 
     @Override
-    public Integer takeCash(int amount) {
-        cashBalance += amount;
-        return cashBalance;
+    public void takeCash(int amount) {
+        synchronized (cashBalance) {
+            cashBalance += amount;
+        }
     }
 
     @Override
@@ -17,6 +19,12 @@ public class CashBoxImpl implements CashBox {
 
     @Override
     public void printCashBalance() {
-        System.out.println(cashBalance);
+        synchronized (cashBalance) {
+            System.out.println(cashBalance);
+        }
+    }
+
+    public void close() {
+        isRun = false;
     }
 }
