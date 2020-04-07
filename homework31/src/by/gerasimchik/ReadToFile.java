@@ -2,6 +2,8 @@ package by.gerasimchik;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashSet;
 
 public class ReadToFile {
 
@@ -16,24 +18,32 @@ public class ReadToFile {
         return null;
     }
 
-    public static void main(String[] args) {
-
-        ReadToFile readFromFile = new ReadToFile();
-        String textFile = readFromFile.readFromFile("readme.txt");
+    public void result() {
+        String textFile = readFromFile("readme.txt");
         System.out.println("Читаем текст : " + textFile);
 
-        if (!textFile.matches("^\\D*$")) {
-            int count = 0, sum = 0;
-            System.out.print("Цифры в тексте: ");
-            for (int i = 0; i < textFile.length(); i++) {
-                if (Character.isDigit(textFile.charAt(i))) {
-                    count++;
-                    System.out.print(textFile.charAt(i) + " | ");
-                    sum += Integer.parseInt(String.valueOf(textFile.charAt(i)));
-                }
-            }
-            System.out.println("\nТекст содержит " + count + " цифр и их сумма = " + sum);
-        }
-    }
+        textFile = textFile.replaceAll("[-!?:;<_>`{}()=+*%#@]\"", "");
+        textFile = textFile.replaceAll("[.,]", " ");
+        textFile = textFile.replaceAll("[A-Za-z]", "");
+        textFile = textFile.replaceAll("[А-Яа-я]", "");
+        String trim = textFile.trim();
 
+        String[] txt = trim.split(" +");
+
+        ArrayList<String> beforeDelete = new ArrayList<>();
+        HashSet<String> afterDelete = new HashSet<>();
+        int sum = 0;
+        for (String word : txt) {
+
+            beforeDelete.add(word);
+            afterDelete.add(word);
+            sum += Integer.parseInt(word);
+        }
+        System.out.println("Числа в тексте: " + beforeDelete.toString());
+        System.out.println("Сумма чисел: " + sum);
+        System.out.println("Числа в тексте после удаления дубликатов: " + afterDelete.toString());
+
+
+
+    }
 }

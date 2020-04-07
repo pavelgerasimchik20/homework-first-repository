@@ -3,14 +3,12 @@ import javax.swing.*;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class PrintFile {
+public class WriteFile {
 
-    public boolean printToFile(String data, String fileName) {
-
+    public boolean writeToFile(String data, String fileName) {
         try (FileOutputStream fos = new FileOutputStream(fileName)) {
             fos.write(data.getBytes());
             fos.flush();
-
         } catch (IOException e) {
             e.printStackTrace();
             return false;
@@ -18,9 +16,9 @@ public class PrintFile {
         return true;
     }
 
-    public static void main(String[] args) {
+    public void write () {
         String textFile= JOptionPane.showInputDialog(null,"Enter your text: ");
-        boolean result = new PrintFile().printToFile(textFile, "readme.txt");
+        boolean result = new WriteFile().writeToFile(textFile, "readme.txt");
         if (result) System.out.println("Finished");
         else System.out.println("Error");
     }
