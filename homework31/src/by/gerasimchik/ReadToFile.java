@@ -26,6 +26,7 @@ public class ReadToFile {
         textFile = textFile.replaceAll("[.,]", " ");
         textFile = textFile.replaceAll("[A-Za-z]", "");
         textFile = textFile.replaceAll("[А-Яа-я]", "");
+
         String trim = textFile.trim();
 
         String[] txt = trim.split(" +");

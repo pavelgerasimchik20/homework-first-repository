@@ -6,6 +6,7 @@ import java.io.IOException;
 public class WriteFile {
 
     public boolean writeToFile(String data, String fileName) {
+
         try (FileOutputStream fos = new FileOutputStream(fileName)) {
             fos.write(data.getBytes());
             fos.flush();
